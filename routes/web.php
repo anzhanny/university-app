@@ -149,3 +149,6 @@ Route::patch('/information/update/{id}', [InformationController::class,'update']
 Route::get('/information/delete/{id}', [InformationController::class,'destroy']);
 
 
+
+
+

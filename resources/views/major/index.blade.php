@@ -25,7 +25,7 @@
 <section class="content">
       <div class="container-fluid">
       <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-major">Add Data Major</a>
+      <a href="/add-major"><b>+</b> Add Data Major</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -58,7 +58,7 @@
     </table>
 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -68,6 +68,10 @@
               </button>
             </div>
             <div class="modal-body">
+            <span class="btn btn-success col fileinput-button dz-clickable">
+                        <i class="fas fa-plus"></i>
+                        <span>Add files</span>
+                      </span>
             <form action="/add-major" method="post">
            {{ csrf_field() }}
 

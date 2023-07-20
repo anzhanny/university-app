@@ -25,8 +25,8 @@
 
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-information">Add Data Information</a>
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+      <a href="/add-information"><b>+</b>Add Data Information</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -44,6 +44,7 @@
             <th>Deskripsi</th>
             <th>Opsi</th>
         </tr>
+        </thead>
         <tbody>
         @foreach($informations as $information)
         <tr>
@@ -54,9 +55,10 @@
                 <a class="btn btn-info" href="/information/{{ $information->id}}">Edit</a>
                 <a class="btn btn-danger" href="/information/delete/{{ $information->id}}">Hapus</a>
             </td>
-        </tr>
+        </tr>        
+      </tbody>   
         @endforeach
-        </tbody>   
+
     </table>
 
             <!-- Modal -->

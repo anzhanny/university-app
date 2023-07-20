@@ -25,8 +25,8 @@
 
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary"  data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-detailsubject">Add Data Detail Subject</a>
+      <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModal">
+      <a href="/add-detailsubject"><b>+</b>Add Data Detail Subject</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -44,6 +44,7 @@
             <th>Tahun Ajaran</th>
             <th>Opsi</th>
         </tr>
+        </thead>
         <tbody>
         @foreach($detailsubjects as $detailsubject)
         <tr>

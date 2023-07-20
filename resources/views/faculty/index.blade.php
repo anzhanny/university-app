@@ -25,8 +25,8 @@
 
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-faculty">Add Data Faculty</a>
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+      <a href="/add-faculty"><b>+</b>Add Data Faculty</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -46,6 +46,7 @@
             <th>Jml Jurusan</th>
             <th>Opsi</th>
         </tr>
+        </thead>
         <tbody>
         @foreach($faculties as $faculty)
         <tr>
@@ -65,10 +66,10 @@
                 <a class="btn btn-danger" href="/faculty/delete/{{ $faculty->id}}">Hapus</a>
             </td>
         </tr>
-
-        @endforeach
-</form>
         </tbody>
+        @endforeach
+
+
     </table>
 
             <!-- Modal -->

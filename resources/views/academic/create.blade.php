@@ -1,88 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Practice CRUD Code Circle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Document</title>
 </head>
 <body>
-            <!-- Modal -->
-        <!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add Data Academic</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-            <form action="/academic/store" method="post">
-           {{ csrf_field() }}
-
-                <div class="form-group">
-                  <label for="exampleInputEmail1">No</label>
-                  <input type="number" name="no" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="No" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">NIM</label>
-                  <input type="number" name="nim" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="NIM" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Mahasiswa</label>
-                  <input type="text" name="nm_student" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Mahasiswa" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Kode Matkul</label>
-                  <input type="text" name="cd_subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Kode Matkul" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Nama Matkul</label>
-                  <input type="text" name="nm_subject" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nama Matkul" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">SKS</label>
-                  <input type="number" name="sks" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="SKS" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Semester</label>
-                  <input type="number" name="semester" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Semester" required>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Nilai</label>
-                  <input type="number" name="grade" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nilai " required>
-                </div>
-                <div class="modal-footer">
-                <a class="btn btn-danger" href="/academic">kembali</a> </button>
-                <button  class="btn btn-success btn-sm">Simpan</button>
-                </div>
-              </form>
-          </div>
-        </div>
-      </div>
-      </div> -->
-      <!-- Close Modal -->
-
-
-    <h3>Data Academic</h3>
-    <br />
-
+    <center><h1 class="text-center mb-4"> Data Academic</h1></center>
     <form action="/academic/store" method="post">
         {{ csrf_field() }}
-        <div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">No</label>
-            <input type="number" name="no" require="required">     <br /> <br />
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="no" class="form-label">No</label><br>
+                                <input type="number" class="form-control" name="no" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nim" class="form-label">NIM</label><br>
+                                <input type="text" class="form-control" name="nim" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nm_student" class="form-label">Nama Mahasiswa</label><br>
+                                <input type="text"  class="form-control" name="nm_subject" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="cd_subject" class="form-label">Kode Matkul</label><br>
+                                <input type="text"  class="form-control" name="cd_subject" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nm_subject" class="form-label">Nama Matkul</label><br>
+                                <input type="text"  class="form-control" name="nm_subject" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sks" class="form-label">SKS</label><br>
+                                <input type="number"  class="form-control" name="sks" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="semester" class="form-label">Semester</label><br>
+                                <input type="number"  class="form-control" name="semester" required="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="grade" class="form-label">Nilai</label><br>
+                                <input type="text"  class="form-control" name="grade" required="required">
+                            </div>
+                            <div class="card-footer">
+                              <div class="col-12">
+                              <a a href="/academic" class="btn btn-secondary">kembali</a>
+                              <input type="submit" value="Save" class="btn btn-success float-right">
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        NIM <input type="number" name="nim" require="required">     <br /> <br />
-        Nama Mahasiswa <input type="text" name="nm_student" require="required">     <br /> <br />
-        Kode Matkul <input type="text" name="cd_subject" require="required">     <br /> <br />
-        Nama Matkul <input type="text" name="nm_subject" require="required">     <br /> <br />
-        SKS <input type="number" name="sks" require="required">     <br /> <br />
-        Semester <input type="number" name="semester" require="required">     <br /> <br />
-        Nilai <input type="text" name="grade" require="required">     <br /> <br />
-        
-        <input type="submit" value="Save Data">
-        <button  class="btn btn-primary btn-sm">
-        <a href="/academic">kembali</a> </button>
-    </form>
+        </form>
 </body>
 </html>

@@ -1,25 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Practice CRUD UNPASIM</title>
-</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Practice CRUD UNPASIM</title></head>
 <body>
-    <h3>Edit Employee</h3>
-    <br />
-
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <center><h3 class="p-3 mb-2 bg-success text-white">Edit Employee</h3></center>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
     <form action="/employee/update/{{ $employees->id}}" method="post">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
-        <input type="hidden" name="id" value="{{ $employees->id}}">     <br /> 
-        Nip <input type="number" required name="nip" value="{{ $employees->nip }}"> <br />     <br /> <br />
-        Nama <input type="text" required name="name" value="{{ $employees->name }}">     <br /> <br />
-        Jabatan <input type="text" required name="role" value="{{ $employees->role }}">     <br /> <br />
-        <input type="submit" value="Save Data">
-        <button  class="btn btn-primary btn-sm">
-        <a href="/employee">kembali</a>
-        </button>
+        <input type="hidden" name="id" value="{{ $employees->id}}">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="nip">NIP</label>
+                <input type="number" class="form-control" name="nip" required="required" value="{{ $employees->nip}}" placeholder="nip">
+            </div>
+            <div class="form-group">
+                <label for="name">Nama</label>
+                <input type="text" class="form-control" name="name" required="required" value="{{ $employees->name}}" placeholder="name">
+            </div>
+            <div class="form-group">
+                <label for="role">Jabatan</label>
+                <input type="text" class="form-control" name="role" required="required" value="{{ $employees->role}}" placeholder="role">
+            </div>
 
-
-    </form>
+            <div class="card-footer">
+                <div class="col-12">
+                    <a a href="/employee" class="btn btn-secondary">Cancel</a>
+                        <input type="submit" value="Save Changes" class="btn btn-success float-right">
+                </div>
+                    </div>
+            <!-- /.card -->
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
 </body>
 </html>

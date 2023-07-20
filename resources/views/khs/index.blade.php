@@ -25,8 +25,8 @@
 
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-khs">Add Data Khs</a>
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+      <a href="/add-khs"><b>+</b>Add Data Khs</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -46,6 +46,7 @@
             <th>Opsi</th>
         </tr>
         @foreach($results as $result)
+        </thead>
         <tbody>
         <tr>
             <td>{{ $result->no }}</td>
@@ -65,6 +66,7 @@
                   </button>
             </td> -->
         </tr>
+    </tbody>
         @endforeach
     </table>
 

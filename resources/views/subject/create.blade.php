@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Practice CRUD Code Circle</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>Document</title>
 </head>
 <body>
-    <h3>Data Subject</h3>
-
-    <button  class="btn btn-primary btn-sm">
-    <a href="/subject">kembali</a>
-    </button>
-
-    <br />
-    <br />
-
+    <center><h1 class="text-center mb-4"> Data subject</h1></center>
     <form action="/subject/store" method="post">
+        
         {{ csrf_field() }}
-        No <input type="number" name="no" require="required">     <br /> <br />
-        Kd Matkul<input type="text" name="cd_subject" require="required">     <br /> <br />
-        Nama Matkul <input type="text" name="nm_subject" require="required">     <br /> <br />
-        SKS <input type="number" name="sks" require="required">     <br /> <br />
-        Semester <input type="number" name="semester" require="required">     <br /> <br />
-        <input type="submit" value="Save Data">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <label for="no" class="form-label">No</label><br>
+                                <input type="number" name="no" require="required">  
+                            </div>
+                            <div class="mb-3">
+                                <label for="cd_subject" class="form-label">Kd Matkul</label><br>
+                                <input type="text" name="cd_subject" require="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="nm_subject" class="form-label">Nama Matkul</label><br>
+                                <input type="text" name="nm_subject" require="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="sks" class="form-label">SKS</label><br>
+                                <input type="number" name="sks" require="required">
+                            </div>
+                            <div class="mb-3">
+                                <label for="semester" class="form-label">Semester</label><br>
+                                <input type="number" name="semester" require="required">
+                            </div>
+                            <div class="card-footer">
+                              <div class="col-12">
+                              <a a href="/subject" class="btn btn-secondary">kembali</a>
+                              <input type="submit" value="Save" class="btn btn-success float-right">
+                              </div>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </form>
 </body>
 </html>

@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Practice CRUD UNPASIM</title>
 </head>
 <body>
-    <h3>Edit Subject</h3>
-    <button  class="btn btn-primary btn-sm">
-    <a href="/subject">kembali</a>
-    </button>
-
-    <br />
-    <br />
-
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header">
+                <center><h3 class="p-3 mb-2 bg-success text-white">Edit subject</h3></center>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
     <form action="/subject/update/{{ $subjects->id}}" method="post">
         {{ csrf_field() }}
         {{ method_field('PATCH') }}
-        <input type="hidden" name="id" value="{{ $subjects->id}}">     <br /> 
-        No <input type="number" required name="no" value="{{ $subjects->no }}"> <br />     <br /> <br />
-        Kd matkul <input type="text" required name="nm_ukm" value="{{ $subjects->cd_subject }}">     <br /> <br />
-        Nama matkul <input type="text" required name="nm_ukm" value="{{ $subjects->nm_subject }}">     <br /> <br />
-        SKS <input type="number" required name="activity_date" value="{{ $subjects->sks }}">     <br /> <br />
-        Semester <input type="number" required name="activity_place" value="{{ $subjects->semester }}">     <br /> <br />
-        <input type="submit" value="Save Data">
-    </form>
+        <input type="hidden" name="id" value="{{ $subjects->id}}">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="no">No</label>
+                <input type="number" class="form-control" name="no" required="required" value="{{ $subjects->no}}" placeholder="no">
+            </div>
+            <div class="form-group">
+                <label for="cd_subject">Kd Matkul</label>
+                <input type="text" class="form-control" name="cd_subject" required="required" value="{{ $subjects->cd_subject}}" placeholder="cd subject">
+            </div>
+            <div class="form-group">
+                <label for="nm_subject">Nama Matkul</label>
+                <input type="text" class="form-control" name="nm_subject" required="required" value="{{ $subjects->nm_subject}}" placeholder="nm subject">
+            </div>
+            <div class="form-group">
+                <label for="sks">SKS</label>
+                <input type="number" class="form-control" name="sks" required="required" value="{{ $subjects->sks}}" placeholder="sks">
+            </div>
+            <div class="form-group">
+                <label for="semester">Semester</label>
+                <input type="number" class="form-control" name="semester" required="required" value="{{ $subjects->semester}}" placeholder="semester">
+            </div>
+         <!-- /.card-body -->
+
+         <div class="card-footer">
+                        <div class="col-12">
+                            <a a href="/subject" class="btn btn-secondary">Cancel</a>
+                                <input type="submit" value="Save Changes" class="btn btn-success float-right">
+                        </div>
+                    </div>
+            <!-- /.card -->
+                </form>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
 </body>
 </html>

@@ -25,8 +25,8 @@
 
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-academic">Add Data Employee</a>
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+      <a href="/add-employee"><b>+</b>Add Data Employee</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -44,6 +44,8 @@
             <th>Jabatan</th>
             <th>Opsi</th>
         </tr>
+        </thead>
+        <tbody>
         @foreach($employees as $employee)
         <tr>
             <td>{{ $employee->nip }}</td>

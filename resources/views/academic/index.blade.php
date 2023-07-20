@@ -25,7 +25,7 @@
 
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
       <a href="/add-academic">Add Data Academic</a>
           <i class="fa fa-plus"></i>
       </button>
@@ -49,6 +49,7 @@
             <th>Nilai</th>
             <th>Opsi</th>
         </tr>
+        </thead>
         <tbody>
         @foreach($academics as $academic)
         <tr>

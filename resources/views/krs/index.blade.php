@@ -25,8 +25,8 @@
 
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-krs">Add Data krs</a>
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+      <a href="/add-krs"><b>+</b>Add Data krs</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -45,6 +45,7 @@
             <th>NIM</th>
             <th>Opsi</th>
         </tr>
+        </thead>
         <tbody>
         @foreach($plans as $plan)
         <tr>
@@ -67,6 +68,7 @@
                   </button>
             </td> -->
         </tr>
+          </tbody>
         @endforeach
     </table>
 

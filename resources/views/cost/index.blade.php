@@ -24,8 +24,8 @@
     </div>
 <section class="content">
       <div class="container-fluid">
-      <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
-      <a href="/add-cost">Add Data Cost</a>
+      <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#exampleModal">
+      <a href="/add-cost"><b>+</b>Add Data Cost</a>
           <i class="fa fa-plus"></i>
       </button>
       @if($errors->any())
@@ -52,6 +52,7 @@
             <th>BPP</th>
             <th>Opsi</th>
         </tr>
+        </thead>
         <tbody>
         @foreach($costs as $cost)
         <tr>
@@ -64,6 +65,7 @@
                 <a class="btn btn-danger" href="/cost/delete/{{ $cost->id}}">Hapus</a>
             </td>
         </tr>
+        </tbody>
         @endforeach    
     </table>   
 

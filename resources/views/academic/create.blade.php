@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <center><h1 class="text-center mb-4"> Data Academic</h1></center>
+    <center><h3 class="text-center mb-4"> Data Academic</h3></center>
     <form action="/academic/store" method="post">
         {{ csrf_field() }}
         <div class="container">
@@ -15,35 +15,35 @@
                 <div class="col-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="no" class="form-label">No</label><br>
                                 <input type="number" class="form-control" name="no" required="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="nim" class="form-label">NIM</label><br>
                                 <input type="text" class="form-control" name="nim" required="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="nm_student" class="form-label">Nama Mahasiswa</label><br>
-                                <input type="text"  class="form-control" name="nm_subject" required="required">
+                                <input type="text"  class="form-control" name="nm_student" required="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="cd_subject" class="form-label">Kode Matkul</label><br>
                                 <input type="text"  class="form-control" name="cd_subject" required="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="nm_subject" class="form-label">Nama Matkul</label><br>
                                 <input type="text"  class="form-control" name="nm_subject" required="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="sks" class="form-label">SKS</label><br>
                                 <input type="number"  class="form-control" name="sks" required="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="semester" class="form-label">Semester</label><br>
                                 <input type="number"  class="form-control" name="semester" required="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="grade" class="form-label">Nilai</label><br>
                                 <input type="text"  class="form-control" name="grade" required="required">
                             </div>

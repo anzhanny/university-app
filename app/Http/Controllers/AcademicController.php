@@ -75,6 +75,7 @@ class AcademicController extends Controller
         $semester = $request->input('semester');
         $grade = $request->input('grade');
         $data = Academic::find($id);
+        $data->no = $no;
         $data->nim = $nim;
         $data->nm_student =  $nm_student;
         $data->cd_subject =  $cd_subject;
@@ -93,7 +94,7 @@ class AcademicController extends Controller
     public function destroy(string $id)
     {
         ///delete sow
-        $academics = Academic::findOrFail($id);
+        $academics = Academic::find($id);
         $academics->delete();
         // return response()->json($faculties);
         return redirect('/academic');

@@ -10,13 +10,13 @@
  <!-- Main content -->
  <section class="content">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
           <!-- left column -->
           <div class="col-md-6">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <center><h3 class="p-3 mb-2 bg-success text-white">Edit Schedule</h3></center>
+                <center><h3 class="text-center mb-4">Edit Schedule</h3></center>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -43,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label for="time">Waktu</label>
-                <input type="datetime-local" class="form-control" name="time" required="required" value="{{ $schedules->time}}" placeholder="time">
+                <input type="text" class="form-control" name="time" required="required" value="{{ $schedules->time}}" placeholder="time">
             </div>
 
             <div class="card-footer">

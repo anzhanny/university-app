@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta class="form-control" name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
-    <center><h1 class="text-center mb-4"> Data Faculty</h1></center>
+    <center><h3 class="text-center mb-4"> Data Faculty</h3></center>
     <form action="/faculty/store" method="post">
         {{ csrf_field() }}
         <div class="container">
@@ -15,25 +15,25 @@
                 <div class="col-6">
                     <div class="card">
                         <div class="card-body">
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="no" class="form-label">No</label><br>
-                                <input type="number" name="no" require="required"> 
+                                <input type="number" class="form-control" name="no" require="required"> 
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="nm_fac" class="form-label">Nama Fakultas </label><br>
-                                <input type="text" name="nm_fac" require="required"> 
+                                <input type="text" class="form-control" name="nm_fac" require="required"> 
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="amount_lecturer" class="form-label">Jml Dosen </label><br>
-                                <input type="number" name="amount_lecturer" require="required">
+                                <input type="number" class="form-control" name="amount_lecturer" require="required">
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="amount_student" class="form-label">Jml Mhs </label><br>
-                                <input type="number" name="amount_student" require="required"> 
+                                <input type="number" class="form-control" name="amount_student" require="required"> 
                             </div>
-                            <div class="mb-3">
+                            <div class="form-group">
                                 <label for="amount_major" class="form-label">Jml Jurusan </label><br>
-                                <input type="number" name="amount_major" require="required">
+                                <input type="number" class="form-control" name="amount_major" require="required">
                             </div>
                             <div class="card-footer">
                               <div class="col-12">

@@ -10,13 +10,13 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
           <!-- left column -->
           <div class="col-md-6">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <center><h3 class="p-3 mb-2 bg-success text-white">Edit Student</h3></center>
+                <center><h3 class="text-center mb-4">Edit Student</h3></center>
               </div>
 
     <form action="/student/update/{{ $students->id}}" method="post">

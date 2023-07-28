@@ -9,13 +9,13 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <div class="row">
+        <div class="row justify-content-center">
           <!-- left column -->
           <div class="col-md-6">
             <!-- general form elements -->
             <div class="card card-primary">
               <div class="card-header">
-                <center><h3 class="p-3 mb-2 bg-success text-white">Edit Academic</h3></center>
+                <center><h3 class="text-center mb-4">Edit Academic</h3></center>
               </div>
               <!-- /.card-header -->
               <!-- form start -->
@@ -33,15 +33,15 @@
                 <input type="number" class="form-control" name="nim" required="required" value="{{ $academics->nim}}" placeholder="nim">
             </div>
             <div class="form-group">
-                <label for="nm_student">Nm Mahasiswa</label>
+                <label for="nm_student">Nama Mahasiswa</label>
                 <input type="text" class="form-control" name="nm_student" required="required" value="{{ $academics->nm_student}}" placeholder="name student">
             </div>
             <div class="form-group">
-                <label for="cd_subject">Kd Matkul</label>
+                <label for="cd_subject">Kode Matkul</label>
                 <input type="text" class="form-control" name="cd_subject" required="required" value="{{ $academics->cd_subject}}" placeholder="code subject">
             </div>
             <div class="form-group">
-                <label for="nm_subject">Nm Matkul</label>
+                <label for="nm_subject">Matakuliah</label>
                 <input type="text" class="form-control" name="nm_subject" required="required" value="{{ $academics->nm_subject}}" placeholder="nm_subject">
             </div>
             <div class="form-group">
